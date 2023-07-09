@@ -47,7 +47,7 @@ class _UserChatPageState extends State<UserChatPage> {
           padding: EdgeInsets.all(8.0),
           margin: EdgeInsets.symmetric(vertical: 4.0, horizontal: 8.0),
           decoration: BoxDecoration(
-            color: Colors.blue,
+            color: Color.fromARGB(255, 57, 57, 57),
             borderRadius: BorderRadius.circular(8.0),
           ),
           child: Text(
@@ -63,7 +63,7 @@ class _UserChatPageState extends State<UserChatPage> {
           padding: EdgeInsets.all(8.0),
           margin: EdgeInsets.symmetric(vertical: 4.0, horizontal: 8.0),
           decoration: BoxDecoration(
-            color: Colors.blue,
+            color: Color.fromARGB(255, 57, 57, 57),
             borderRadius: BorderRadius.circular(8.0),
           ),
           child: Image.file(
