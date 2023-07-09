@@ -1,9 +1,8 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:like_button/like_button.dart';
-import 'package:trendify_new_clone/utils/colors.dart';
-import 'package:trendify_new_clone/utils/global_variable.dart';
-// import 'package:trendify_new/widget/post_card.dart';
+import 'package:trendify_new/utils/colors.dart';
+import 'package:trendify_new/utils/global_variable.dart';
+
 
 class FeedScreen extends StatefulWidget {
   const FeedScreen({Key? key}) : super(key: key);
