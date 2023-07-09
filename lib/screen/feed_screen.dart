@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:like_button/like_button.dart';
 import 'package:trendify_new/utils/colors.dart';
 import 'package:trendify_new/utils/global_variable.dart';
-// import 'package:trendify_new/widget/post_card.dart';
 
 class FeedScreen extends StatefulWidget {
   const FeedScreen({Key? key}) : super(key: key);
