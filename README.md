@@ -1,7 +1,6 @@
 # trendify_new
 # UAS Mobile Programming
 
-<h1>Mobile Programming</h1>
 <h1>Kelompok Social Media 2</h1>
   <p>535210009-Eddy Nathansyah</p>
   <p>535210032-Apriyanto Chandra</p>
