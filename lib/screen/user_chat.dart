@@ -88,7 +88,7 @@ class _UserChatPageState extends State<UserChatPage> {
         children: [
           Expanded(
             child: ListView.builder(
-              reverse: true,
+              reverse: false,
               itemCount: messages.length,
               itemBuilder: (ctx, index) => buildMessage(messages[index]),
             ),
