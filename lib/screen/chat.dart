@@ -10,7 +10,7 @@ class ChatPage extends StatefulWidget {
 }
 
 class _ChatPageState extends State<ChatPage> {
-  final List<String> allUsers = ['Eddy', 'Raymond', 'Vannes', 'Apriyanto', 'Adyatma', 'A', 'B', 'C', 'D', 'E'];
+  final List<String> allUsers = ['admin', 'maribelajar', 'apri', 'raymondtatang', 'arya'];
   List<String> displayedUsers = [];
 
   @override
