@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'dart:io';
+import 'package:image_picker/image_picker.dart';
 
 class UserChatPage extends StatefulWidget {
   final String username;
@@ -10,7 +12,7 @@ class UserChatPage extends StatefulWidget {
 }
 
 class _UserChatPageState extends State<UserChatPage> {
-  List<String> messages = [];
+  List<dynamic> messages = [];
   TextEditingController messageController = TextEditingController();
 
   void sendMessage() {
@@ -20,6 +22,59 @@ class _UserChatPageState extends State<UserChatPage> {
         messageController.clear();
       });
     }
+  }
+
+  void sendPhoto(File photo) {
+    setState(() {
+      messages.add(photo);
+    });
+  }
+
+  Future<void> pickImage() async {
+    ImagePicker imagePicker = ImagePicker();
+    XFile? pickedFile = await imagePicker.pickImage(source: ImageSource.gallery);
+    if (pickedFile != null) {
+      File selectedPhoto = File(pickedFile.path);
+      sendPhoto(selectedPhoto);
+    }
+  }
+
+  Widget buildMessage(dynamic message) {
+    if (message is String) {
+      return Align(
+        alignment: Alignment.centerRight,
+        child: Container(
+          padding: EdgeInsets.all(8.0),
+          margin: EdgeInsets.symmetric(vertical: 4.0, horizontal: 8.0),
+          decoration: BoxDecoration(
+            color: Color.fromARGB(255, 57, 57, 57),
+            borderRadius: BorderRadius.circular(8.0),
+          ),
+          child: Text(
+            message,
+            style: TextStyle(color: Colors.white),
+          ),
+        ),
+      );
+    } else if (message is File) {
+      return Align(
+        alignment: Alignment.centerRight,
+        child: Container(
+          padding: EdgeInsets.all(8.0),
+          margin: EdgeInsets.symmetric(vertical: 4.0, horizontal: 8.0),
+          decoration: BoxDecoration(
+            color: Color.fromARGB(255, 57, 57, 57),
+            borderRadius: BorderRadius.circular(8.0),
+          ),
+          child: Image.file(
+            message,
+            width: 150,
+            height: 150,
+          ),
+        ),
+      );
+    }
+    return Container();
   }
 
   @override
@@ -33,10 +88,9 @@ class _UserChatPageState extends State<UserChatPage> {
         children: [
           Expanded(
             child: ListView.builder(
+              reverse: true,
               itemCount: messages.length,
-              itemBuilder: (ctx, index) => ListTile(
-                title: Text(messages[index]),
-              ),
+              itemBuilder: (ctx, index) => buildMessage(messages[index]),
             ),
           ),
           Padding(
@@ -50,6 +104,10 @@ class _UserChatPageState extends State<UserChatPage> {
                       hintText: 'Type your message...',
                     ),
                   ),
+                ),
+                IconButton(
+                  icon: Icon(Icons.photo),
+                  onPressed: pickImage,
                 ),
                 IconButton(
                   icon: Icon(Icons.send),

@@ -1,9 +1,8 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:like_button/like_button.dart';
 import 'package:trendify_new/utils/colors.dart';
 import 'package:trendify_new/utils/global_variable.dart';
-// import 'package:trendify_new/widget/post_card.dart';
+
 
 class FeedScreen extends StatefulWidget {
   const FeedScreen({Key? key}) : super(key: key);
@@ -37,37 +36,41 @@ class _FeedScreenState extends State<FeedScreen> {
               children: [
                 Row(
                   children: [
-                    // Input gambar dari backend
-                    Text('pic'),
+                    CircleAvatar(
+                      backgroundImage: AssetImage(
+                        'assets/images/images_post2.jpg',
+                      ),
+                    ),
                     SizedBox(
                       width: 10,
                     ),
                     Text(
-                      'Username',
+                      'maribelajar',
                       style: TextStyle(fontWeight: FontWeight.w500),
                     ),
                     SizedBox(
                       width: 5,
                     ),
-                    // Input id dari backend
                     Text(
-                      '@username',
+                      '● maribelajar',
                       style: TextStyle(color: nonActiveColor),
                     ),
-                    SizedBox(
-                      width: 129.72,
-                    ),
-                    Text('Tanggal'),
+                    Expanded(
+                      child: Text(
+                        '9 Jul 2023',
+                        textAlign: TextAlign.right,
+                      ),
+                    )
                   ],
                 ),
                 Row(
                   children: [
                     Padding(
-                      padding: EdgeInsets.only(top: 80),
+                      padding: EdgeInsets.only(top: 50),
                     ),
                     Expanded(
                       child: Text(
-                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sem odio, egestas ut sapien quis, sagittis scelerisque diam. ',
+                        'Ayo Belajar di Mari Belajar bersama guru kami, anda siap menjadi juara!',
                       ),
                     )
                   ],
@@ -98,37 +101,41 @@ class _FeedScreenState extends State<FeedScreen> {
               children: [
                 Row(
                   children: [
-                    // Input gambar dari backend
-                    Text('pic'),
+                    CircleAvatar(
+                      backgroundImage: AssetImage(
+                        'assets/images/images_post.jpg',
+                      ),
+                    ),
                     SizedBox(
                       width: 10,
                     ),
                     Text(
-                      'Username',
+                      'raymondtatang',
                       style: TextStyle(fontWeight: FontWeight.w500),
                     ),
                     SizedBox(
                       width: 5,
                     ),
-                    // Input id dari backend
                     Text(
-                      '@username',
+                      '● raymondtatang',
                       style: TextStyle(color: nonActiveColor),
                     ),
-                    SizedBox(
-                      width: 129.72,
-                    ),
-                    Text('Tanggal'),
+                    Expanded(
+                      child: Text(
+                        '9 Jul 2023',
+                        textAlign: TextAlign.right,
+                      ),
+                    )
                   ],
                 ),
                 Row(
                   children: [
                     Padding(
-                      padding: EdgeInsets.only(top: 80),
+                      padding: EdgeInsets.only(top: 30),
                     ),
                     Expanded(
                       child: Text(
-                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sem odio, egestas ut sapien quis, sagittis scelerisque diam. ',
+                        'Hari ini kerja dulu guys..',
                       ),
                     ),
                   ],
@@ -169,37 +176,41 @@ class _FeedScreenState extends State<FeedScreen> {
               children: [
                 Row(
                   children: [
-                    // Input gambar dari backend
-                    Text('pic'),
+                    CircleAvatar(
+                      backgroundImage: AssetImage(
+                        'assets/images/admin_post.jpg',
+                      ),
+                    ),
                     SizedBox(
                       width: 10,
                     ),
                     Text(
-                      'Username',
+                      'admin',
                       style: TextStyle(fontWeight: FontWeight.w500),
                     ),
                     SizedBox(
                       width: 5,
                     ),
-                    // Input id dari backend
                     Text(
-                      '@username',
+                      '● admin',
                       style: TextStyle(color: nonActiveColor),
                     ),
-                    SizedBox(
-                      width: 129.72,
-                    ),
-                    Text('Tanggal'),
+                    Expanded(
+                      child: Text(
+                        '6 Jul 2023',
+                        textAlign: TextAlign.right,
+                      ),
+                    )
                   ],
                 ),
                 Row(
                   children: [
                     Padding(
-                      padding: EdgeInsets.only(top: 80),
+                      padding: EdgeInsets.only(top: 35),
                     ),
                     Expanded(
                       child: Text(
-                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sem odio, egestas ut sapien quis, sagittis scelerisque diam. ',
+                        'Testing admin.',
                       ),
                     )
                   ],
