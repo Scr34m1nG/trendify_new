@@ -55,7 +55,7 @@ class _FeedScreenState extends State<FeedScreen> {
                       style: TextStyle(color: nonActiveColor),
                     ),
                     SizedBox(
-                      width: 129.72,
+                      width: 127,
                     ),
                     Text('Tanggal'),
                   ],
